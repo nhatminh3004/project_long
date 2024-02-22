@@ -2,18 +2,11 @@ workflows:
   react-native-android:
     name: React Native Android
     max_build_duration: 60
-    instance_type: macOS M1
+    instance_type: mac_mini_m1
     environment:
       groups:
         - android_credentials
         - expo_credentials
-      # vars:
-      #     CM_KEYSTORE: Encrypted() # <-- Put your encrypted keystore file here
-      #     CM_KEYSTORE_PASSWORD: Encrypted() # <-- Put your encrypted keystore password here
-      #     CM_KEY_ALIAS_PASSWORD: Encrypted() # <-- Put your encrypted keystore alias password here
-      #     CM_KEYSTORE_PATH: /tmp/keystore.keystore
-      #     CM_KEY_ALIAS_USERNAME: Encrypted() # <-- Put your encrypted keystore alias username here
-      #     PACKAGE_NAME: "com.codemagic_react_native"
       node: 15.13.0
     scripts:
       - name: Install npm dependencies
@@ -40,7 +33,7 @@ workflows:
           cd android && ./gradlew assembleRelease
       - name: Expo OTA update
         script: |
-          npx expo-cli login -u $EXPO_USERNAME -p $EXPO_PASSWORD
+          npx expo-cli login -u nhatminhminh57@gmail.com -p Minh@123
           npx expo-cli publish --non-interactive --max-workers 1 --release-channel $EXPO_RELEASE_CHANNEL
     artifacts:
       - android/app/build/outputs/**/*.apk
