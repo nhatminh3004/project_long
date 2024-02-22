@@ -1,0 +1,46 @@
+{
+  "expo": {
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with your friends."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "c5ffdbde-c0ac-4b56-8f6f-32ff8aebc386"
+      }
+    },
+    "android": {
+      "package": "com.minhdeptrai211.kltn_2"
+    }
+  },
+  "name": "KLTN_2",
+  "slug": "KLTN_2",
+  "version": "1.0.0",
+  "orientation": "portrait",
+  "icon": "./assets/icon.png",
+  "userInterfaceStyle": "light",
+  "splash": {
+    "image": "./assets/splash.png",
+    "resizeMode": "contain",
+    "backgroundColor": "#ffffff"
+  },
+  "assetBundlePatterns": [
+    "**/*"
+  ],
+  "ios": {
+    "supportsTablet": true
+  },
+  "android": {
+    "adaptiveIcon": {
+      "foregroundImage": "./assets/adaptive-icon.png",
+      "backgroundColor": "#ffffff"
+    }
+  },
+  "web": {
+    "favicon": "./assets/favicon.png"
+  }
+}
